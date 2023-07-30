@@ -1,0 +1,24 @@
+{
+  "name": "color-my-log",
+  "version": "1.0.0",
+  "description": "Easy color your console.logs in node",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "babel src --out-dir dist --extensions '.ts,.tsx'",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "node",
+    "color",
+    "console",
+    "log"
+  ],
+  "author": "Mark Tyree",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.22.9",
+    "@babel/preset-env": "^7.22.9",
+    "@babel/preset-typescript": "^7.22.5",
+    "typescript": "^5.1.6"
+  }
+}
