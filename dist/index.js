@@ -11,6 +11,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
 function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+/**
+ * Interface for log options. Allows specifying the background color for the log message.
+ */
+/**
+ * Class for logging messages with custom foreground and background colors.
+ */
 var Log = /*#__PURE__*/function () {
   function Log() {
     _classCallCheck(this, Log);
@@ -36,7 +42,14 @@ var Log = /*#__PURE__*/function () {
   }
   _createClass(Log, [{
     key: "black",
-    value: function black(message, options) {
+    value:
+    /**
+     * Logs a message with black foreground color.
+     *
+     * @param {string} message - The message to log.
+     * @param {LogOptions} [options] - Optional settings for the log.
+     */
+    function black(message, options) {
       var output = "".concat(this.fgBlack).concat(message).concat(this.reset);
       if (options !== null && options !== void 0 && options.background) {
         var bg = "bg".concat(options.background);
@@ -44,6 +57,13 @@ var Log = /*#__PURE__*/function () {
       }
       console.log(output);
     }
+
+    /**
+     * Logs a message with red foreground color.
+     *
+     * @param {string} message - The message to log.
+     * @param {LogOptions} [options] - Optional settings for the log.
+     */
   }, {
     key: "red",
     value: function red(message, options) {
@@ -54,6 +74,13 @@ var Log = /*#__PURE__*/function () {
       }
       console.log(output);
     }
+
+    /**
+     * Logs a message with green foreground color.
+     *
+     * @param {string} message - The message to log.
+     * @param {LogOptions} [options] - Optional settings for the log.
+     */
   }, {
     key: "green",
     value: function green(message, options) {
@@ -64,6 +91,13 @@ var Log = /*#__PURE__*/function () {
       }
       console.log(output);
     }
+
+    /**
+     * Logs a message with yellow foreground color.
+     *
+     * @param {string} message - The message to log.
+     * @param {LogOptions} [options] - Optional settings for the log.
+     */
   }, {
     key: "yellow",
     value: function yellow(message, options) {
@@ -74,6 +108,13 @@ var Log = /*#__PURE__*/function () {
       }
       console.log(output);
     }
+
+    /**
+     * Logs a message with blue foreground color.
+     *
+     * @param {string} message - The message to log.
+     * @param {LogOptions} [options] - Optional settings for the log.
+     */
   }, {
     key: "blue",
     value: function blue(message, options) {
@@ -84,6 +125,13 @@ var Log = /*#__PURE__*/function () {
       }
       console.log(output);
     }
+
+    /**
+     * Logs a message with magenta foreground color.
+     *
+     * @param {string} message - The message to log.
+     * @param {LogOptions} [options] - Optional settings for the log.
+     */
   }, {
     key: "magenta",
     value: function magenta(message, options) {
@@ -94,6 +142,13 @@ var Log = /*#__PURE__*/function () {
       }
       console.log(output);
     }
+
+    /**
+     * Logs a message with cyan foreground color.
+     *
+     * @param {string} message - The message to log.
+     * @param {LogOptions} [options] - Optional settings for the log.
+     */
   }, {
     key: "cyan",
     value: function cyan(message, options) {
@@ -104,6 +159,13 @@ var Log = /*#__PURE__*/function () {
       }
       console.log(output);
     }
+
+    /**
+     * Logs a message with white foreground color.
+     *
+     * @param {string} message - The message to log.
+     * @param {LogOptions} [options] - Optional settings for the log.
+     */
   }, {
     key: "white",
     value: function white(message, options) {
@@ -117,5 +179,8 @@ var Log = /*#__PURE__*/function () {
   }]);
   return Log;
 }();
+/**
+ * Default instance of Log class.
+ */
 var _default = new Log();
 exports["default"] = _default;

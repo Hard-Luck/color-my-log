@@ -16,9 +16,15 @@ npm install color-my-log
 
 To use `color-my-log` in your Node.js application, first, require the package and create an instance of the `Log` class:
 
+### JS
+
 ```javascript
-const log = require("color-my-log");
+const log = require("color-my-log").default;
 ```
+
+### TS
+
+_Coming soon_
 
 ### Printing Colored Log Messages
 

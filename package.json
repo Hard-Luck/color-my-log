@@ -1,6 +1,6 @@
 {
   "name": "color-my-log",
-  "version": "1.0.3",
+  "version": "1.0.9",
   "description": "Easy color your console.logs in node",
   "main": "dist/index.js",
   "scripts": {

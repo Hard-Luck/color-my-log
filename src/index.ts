@@ -1,7 +1,13 @@
+/**
+ * Interface for log options. Allows specifying the background color for the log message.
+ */
 interface LogOptions {
   background?: 'Black' | 'Red' | 'Green' | 'Yellow' | 'Blue' | 'Magenta' | 'Cyan' | 'White';
 }
 
+/**
+ * Class for logging messages with custom foreground and background colors.
+ */
 class Log {
   private readonly reset = "\x1b[0m";
 
@@ -25,6 +31,12 @@ class Log {
   private readonly bgCyan = "\x1b[46m";
   private readonly bgWhite = "\x1b[47m";
 
+  /**
+   * Logs a message with black foreground color.
+   *
+   * @param {string} message - The message to log.
+   * @param {LogOptions} [options] - Optional settings for the log.
+   */
   black(message: string, options?: LogOptions) {
     let output = `${this.fgBlack}${message}${this.reset}`;
     if (options?.background) {
@@ -34,6 +46,12 @@ class Log {
     console.log(output);
   }
 
+  /**
+   * Logs a message with red foreground color.
+   *
+   * @param {string} message - The message to log.
+   * @param {LogOptions} [options] - Optional settings for the log.
+   */
   red(message: string, options?: LogOptions) {
     let output = `${this.fgRed}${message}${this.reset}`;
     if (options?.background) {
@@ -43,6 +61,12 @@ class Log {
     console.log(output);
   }
 
+  /**
+   * Logs a message with green foreground color.
+   *
+   * @param {string} message - The message to log.
+   * @param {LogOptions} [options] - Optional settings for the log.
+   */
   green(message: string, options?: LogOptions) {
     let output = `${this.fgGreen}${message}${this.reset}`;
     if (options?.background) {
@@ -52,6 +76,12 @@ class Log {
     console.log(output);
   }
 
+  /**
+   * Logs a message with yellow foreground color.
+   *
+   * @param {string} message - The message to log.
+   * @param {LogOptions} [options] - Optional settings for the log.
+   */
   yellow(message: string, options?: LogOptions) {
     let output = `${this.fgYellow}${message}${this.reset}`;
     if (options?.background) {
@@ -61,6 +91,12 @@ class Log {
     console.log(output);
   }
 
+  /**
+   * Logs a message with blue foreground color.
+   *
+   * @param {string} message - The message to log.
+   * @param {LogOptions} [options] - Optional settings for the log.
+   */
   blue(message: string, options?: LogOptions) {
     let output = `${this.fgBlue}${message}${this.reset}`;
     if (options?.background) {
@@ -70,6 +106,12 @@ class Log {
     console.log(output);
   }
 
+  /**
+   * Logs a message with magenta foreground color.
+   *
+   * @param {string} message - The message to log.
+   * @param {LogOptions} [options] - Optional settings for the log.
+   */
   magenta(message: string, options?: LogOptions) {
     let output = `${this.fgMagenta}${message}${this.reset}`;
     if (options?.background) {
@@ -79,6 +121,12 @@ class Log {
     console.log(output);
   }
 
+  /**
+   * Logs a message with cyan foreground color.
+   *
+   * @param {string} message - The message to log.
+   * @param {LogOptions} [options] - Optional settings for the log.
+   */
   cyan(message: string, options?: LogOptions) {
     let output = `${this.fgCyan}${message}${this.reset}`;
     if (options?.background) {
@@ -88,6 +136,12 @@ class Log {
     console.log(output);
   }
 
+  /**
+   * Logs a message with white foreground color.
+   *
+   * @param {string} message - The message to log.
+   * @param {LogOptions} [options] - Optional settings for the log.
+   */
   white(message: string, options?: LogOptions) {
     let output = `${this.fgWhite}${message}${this.reset}`;
     if (options?.background) {
@@ -98,4 +152,7 @@ class Log {
   }
 }
 
+/**
+ * Default instance of Log class.
+ */
 export default new Log();
