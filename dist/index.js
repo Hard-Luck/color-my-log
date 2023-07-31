@@ -1,186 +1,94 @@
 "use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
-function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-/**
- * Interface for log options. Allows specifying the background color for the log message.
- */
-/**
- * Class for logging messages with custom foreground and background colors.
- */
-var Log = /*#__PURE__*/function () {
-  function Log() {
-    _classCallCheck(this, Log);
-    _defineProperty(this, "reset", "\x1b[0m");
-    // Foreground colors
-    _defineProperty(this, "fgBlack", "\x1b[30m");
-    _defineProperty(this, "fgRed", "\x1b[31m");
-    _defineProperty(this, "fgGreen", "\x1b[32m");
-    _defineProperty(this, "fgYellow", "\x1b[33m");
-    _defineProperty(this, "fgBlue", "\x1b[34m");
-    _defineProperty(this, "fgMagenta", "\x1b[35m");
-    _defineProperty(this, "fgCyan", "\x1b[36m");
-    _defineProperty(this, "fgWhite", "\x1b[37m");
-    // Background colors
-    _defineProperty(this, "bgBlack", "\x1b[40m");
-    _defineProperty(this, "bgRed", "\x1b[41m");
-    _defineProperty(this, "bgGreen", "\x1b[42m");
-    _defineProperty(this, "bgYellow", "\x1b[43m");
-    _defineProperty(this, "bgBlue", "\x1b[44m");
-    _defineProperty(this, "bgMagenta", "\x1b[45m");
-    _defineProperty(this, "bgCyan", "\x1b[46m");
-    _defineProperty(this, "bgWhite", "\x1b[47m");
-  }
-  _createClass(Log, [{
-    key: "black",
-    value:
-    /**
-     * Logs a message with black foreground color.
-     *
-     * @param {string} message - The message to log.
-     * @param {LogOptions} [options] - Optional settings for the log.
-     */
-    function black(message, options) {
-      var output = "".concat(this.fgBlack).concat(message).concat(this.reset);
-      if (options !== null && options !== void 0 && options.background) {
-        var bg = "bg".concat(options.background);
-        if (this[bg]) output = this[bg] + output;
-      }
-      console.log(output);
-    }
-
-    /**
-     * Logs a message with red foreground color.
-     *
-     * @param {string} message - The message to log.
-     * @param {LogOptions} [options] - Optional settings for the log.
-     */
-  }, {
-    key: "red",
-    value: function red(message, options) {
-      var output = "".concat(this.fgRed).concat(message).concat(this.reset);
-      if (options !== null && options !== void 0 && options.background) {
-        var bg = "bg".concat(options.background);
-        if (this[bg]) output = this[bg] + output;
-      }
-      console.log(output);
-    }
-
-    /**
-     * Logs a message with green foreground color.
-     *
-     * @param {string} message - The message to log.
-     * @param {LogOptions} [options] - Optional settings for the log.
-     */
-  }, {
-    key: "green",
-    value: function green(message, options) {
-      var output = "".concat(this.fgGreen).concat(message).concat(this.reset);
-      if (options !== null && options !== void 0 && options.background) {
-        var bg = "bg".concat(options.background);
-        if (this[bg]) output = this[bg] + output;
-      }
-      console.log(output);
-    }
-
-    /**
-     * Logs a message with yellow foreground color.
-     *
-     * @param {string} message - The message to log.
-     * @param {LogOptions} [options] - Optional settings for the log.
-     */
-  }, {
-    key: "yellow",
-    value: function yellow(message, options) {
-      var output = "".concat(this.fgYellow).concat(message).concat(this.reset);
-      if (options !== null && options !== void 0 && options.background) {
-        var bg = "bg".concat(options.background);
-        if (this[bg]) output = this[bg] + output;
-      }
-      console.log(output);
-    }
-
-    /**
-     * Logs a message with blue foreground color.
-     *
-     * @param {string} message - The message to log.
-     * @param {LogOptions} [options] - Optional settings for the log.
-     */
-  }, {
-    key: "blue",
-    value: function blue(message, options) {
-      var output = "".concat(this.fgBlue).concat(message).concat(this.reset);
-      if (options !== null && options !== void 0 && options.background) {
-        var bg = "bg".concat(options.background);
-        if (this[bg]) output = this[bg] + output;
-      }
-      console.log(output);
-    }
-
-    /**
-     * Logs a message with magenta foreground color.
-     *
-     * @param {string} message - The message to log.
-     * @param {LogOptions} [options] - Optional settings for the log.
-     */
-  }, {
-    key: "magenta",
-    value: function magenta(message, options) {
-      var output = "".concat(this.fgMagenta).concat(message).concat(this.reset);
-      if (options !== null && options !== void 0 && options.background) {
-        var bg = "bg".concat(options.background);
-        if (this[bg]) output = this[bg] + output;
-      }
-      console.log(output);
-    }
-
-    /**
-     * Logs a message with cyan foreground color.
-     *
-     * @param {string} message - The message to log.
-     * @param {LogOptions} [options] - Optional settings for the log.
-     */
-  }, {
-    key: "cyan",
-    value: function cyan(message, options) {
-      var output = "".concat(this.fgCyan).concat(message).concat(this.reset);
-      if (options !== null && options !== void 0 && options.background) {
-        var bg = "bg".concat(options.background);
-        if (this[bg]) output = this[bg] + output;
-      }
-      console.log(output);
-    }
-
-    /**
-     * Logs a message with white foreground color.
-     *
-     * @param {string} message - The message to log.
-     * @param {LogOptions} [options] - Optional settings for the log.
-     */
-  }, {
-    key: "white",
-    value: function white(message, options) {
-      var output = "".concat(this.fgWhite).concat(message).concat(this.reset);
-      if (options !== null && options !== void 0 && options.background) {
-        var bg = "bg".concat(options.background);
-        if (this[bg]) output = this[bg] + output;
-      }
-      console.log(output);
-    }
-  }]);
-  return Log;
-}();
-/**
- * Default instance of Log class.
- */
-var _default = new Log();
-exports["default"] = _default;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.log = void 0;
+const reset = "\x1b[0m";
+const fgBlack = "\x1b[30m";
+const fgRed = "\x1b[31m";
+const fgGreen = "\x1b[32m";
+const fgYellow = "\x1b[33m";
+const fgBlue = "\x1b[34m";
+const fgMagenta = "\x1b[35m";
+const fgCyan = "\x1b[36m";
+const fgWhite = "\x1b[37m";
+const bgBlack = "\x1b[40m";
+const bgRed = "\x1b[41m";
+const bgGreen = "\x1b[42m";
+const bgYellow = "\x1b[43m";
+const bgBlue = "\x1b[44m";
+const bgMagenta = "\x1b[45m";
+const bgCyan = "\x1b[46m";
+const bgWhite = "\x1b[47m";
+exports.log = {
+    black: function (message, options) {
+        let output = `${fgBlack}${message}${reset}`;
+        if (options?.background) {
+            const bg = `bg${options.background}`;
+            if (exports.log[bg])
+                output = exports.log[bg] + output;
+        }
+        console.log(output);
+    },
+    red: function (message, options) {
+        let output = `${fgRed}${message}${reset}`;
+        if (options?.background) {
+            const bg = `bg${options.background}`;
+            if (exports.log[bg])
+                output = exports.log[bg] + output;
+        }
+        console.log(output);
+    },
+    green: function (message, options) {
+        let output = `${fgGreen}${message}${reset}`;
+        if (options?.background) {
+            const bg = `bg${options.background}`;
+            if (exports.log[bg])
+                output = exports.log[bg] + output;
+        }
+        console.log(output);
+    },
+    yellow: function (message, options) {
+        let output = `${fgYellow}${message}${reset}`;
+        if (options?.background) {
+            const bg = `bg${options.background}`;
+            if (exports.log[bg])
+                output = exports.log[bg] + output;
+        }
+        console.log(output);
+    },
+    blue: function (message, options) {
+        let output = `${fgBlue}${message}${reset}`;
+        if (options?.background) {
+            const bg = `bg${options.background}`;
+            if (exports.log[bg])
+                output = exports.log[bg] + output;
+        }
+        console.log(output);
+    },
+    magenta: function (message, options) {
+        let output = `${fgMagenta}${message}${reset}`;
+        if (options?.background) {
+            const bg = `bg${options.background}`;
+            if (exports.log[bg])
+                output = exports.log[bg] + output;
+        }
+        console.log(output);
+    },
+    cyan: function (message, options) {
+        let output = `${fgCyan}${message}${reset}`;
+        if (options?.background) {
+            const bg = `bg${options.background}`;
+            if (exports.log[bg])
+                output = exports.log[bg] + output;
+        }
+        console.log(output);
+    },
+    white: function (message, options) {
+        let output = `${fgWhite}${message}${reset}`;
+        if (options?.background) {
+            const bg = `bg${options.background}`;
+            if (exports.log[bg])
+                output = exports.log[bg] + output;
+        }
+        console.log(output);
+    },
+};

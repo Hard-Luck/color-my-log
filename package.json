@@ -1,17 +1,21 @@
 {
   "name": "color-my-log",
-  "version": "1.0.9",
-  "description": "Easy color your console.logs in node",
+  "version": "1.1.0",
+  "description": "Lightweight and easy-to-use npm package for adding colorful terminal messages in Node.js effortlessly.",
   "main": "dist/index.js",
   "scripts": {
-    "build": "babel src --out-dir dist --extensions '.ts,.tsx'",
+    "build": "tsc",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
     "node",
     "color",
     "console",
-    "log"
+    "log",
+    "Node.js terminal colors",
+    "colorful console logs",
+    "Node.js logging",
+    "simple logging utility"
   ],
   "author": "Mark Tyree",
   "license": "MIT",
@@ -20,5 +24,16 @@
     "@babel/preset-env": "^7.22.9",
     "@babel/preset-typescript": "^7.22.5",
     "typescript": "^5.1.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hard-Luck/color-my-log"
+  },
+  "homepage": "https://github.com/Hard-Luck/color-my-log#readme",
+  "bugs": {
+    "url": "https://github.com/Hard-Luck/color-my-log/issues"
+  },
+  "contact": {
+    "email": "tyreemarka@gmail.com"
   }
 }
