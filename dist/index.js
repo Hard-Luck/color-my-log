@@ -10,85 +10,82 @@ const fgBlue = "\x1b[34m";
 const fgMagenta = "\x1b[35m";
 const fgCyan = "\x1b[36m";
 const fgWhite = "\x1b[37m";
-const bgBlack = "\x1b[40m";
-const bgRed = "\x1b[41m";
-const bgGreen = "\x1b[42m";
-const bgYellow = "\x1b[43m";
-const bgBlue = "\x1b[44m";
-const bgMagenta = "\x1b[45m";
-const bgCyan = "\x1b[46m";
-const bgWhite = "\x1b[47m";
+function getBackground(color) {
+    const backgrounds = {
+        black: "\x1b[40m",
+        red: "\x1b[41m",
+        green: "\x1b[42m",
+        yellow: "\x1b[43m",
+        blue: "\x1b[44m",
+        magenta: "\x1b[45m",
+        cyan: "\x1b[46m",
+        white: "\x1b[47m"
+    };
+    return backgrounds[color] || null;
+}
 exports.log = {
     black: function (message, options) {
         let output = `${fgBlack}${message}${reset}`;
-        if (options?.background) {
-            const bg = `bg${options.background}`;
-            if (exports.log[bg])
-                output = exports.log[bg] + output;
-        }
+        const background = options?.background;
+        const bg = getBackground(background);
+        if (bg)
+            output = bg + output;
         console.log(output);
     },
     red: function (message, options) {
         let output = `${fgRed}${message}${reset}`;
-        if (options?.background) {
-            const bg = `bg${options.background}`;
-            if (exports.log[bg])
-                output = exports.log[bg] + output;
-        }
+        const background = options?.background;
+        const bg = getBackground(background);
+        if (bg)
+            output = bg + output;
         console.log(output);
     },
     green: function (message, options) {
         let output = `${fgGreen}${message}${reset}`;
-        if (options?.background) {
-            const bg = `bg${options.background}`;
-            if (exports.log[bg])
-                output = exports.log[bg] + output;
-        }
+        const background = options?.background;
+        const bg = getBackground(background);
+        if (bg)
+            output = bg + output;
         console.log(output);
     },
     yellow: function (message, options) {
         let output = `${fgYellow}${message}${reset}`;
-        if (options?.background) {
-            const bg = `bg${options.background}`;
-            if (exports.log[bg])
-                output = exports.log[bg] + output;
-        }
+        const background = options?.background;
+        const bg = getBackground(background);
+        if (bg)
+            output = bg + output;
         console.log(output);
     },
     blue: function (message, options) {
         let output = `${fgBlue}${message}${reset}`;
-        if (options?.background) {
-            const bg = `bg${options.background}`;
-            if (exports.log[bg])
-                output = exports.log[bg] + output;
-        }
+        const background = options?.background;
+        const bg = getBackground(background);
+        if (bg)
+            output = bg + output;
         console.log(output);
     },
     magenta: function (message, options) {
         let output = `${fgMagenta}${message}${reset}`;
-        if (options?.background) {
-            const bg = `bg${options.background}`;
-            if (exports.log[bg])
-                output = exports.log[bg] + output;
-        }
+        const background = options?.background;
+        const bg = getBackground(background);
+        if (bg)
+            output = bg + output;
         console.log(output);
     },
     cyan: function (message, options) {
         let output = `${fgCyan}${message}${reset}`;
-        if (options?.background) {
-            const bg = `bg${options.background}`;
-            if (exports.log[bg])
-                output = exports.log[bg] + output;
-        }
+        const background = options?.background;
+        const bg = getBackground(background);
+        if (bg)
+            output = bg + output;
         console.log(output);
     },
     white: function (message, options) {
         let output = `${fgWhite}${message}${reset}`;
-        if (options?.background) {
-            const bg = `bg${options.background}`;
-            if (exports.log[bg])
-                output = exports.log[bg] + output;
-        }
+        const background = options?.background;
+        const bg = getBackground(background);
+        if (bg)
+            output = bg + output;
         console.log(output);
     },
 };

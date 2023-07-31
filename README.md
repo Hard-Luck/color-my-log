@@ -1,5 +1,6 @@
 # color-my-log (WIP)
 
+**LOWERCASE BACKGROUND COLOURS && TYPES ADDED**
 **NOTE: This package is currently a work in progress (WIP). It provides a simple way to print colored log messages with background colors in Node.js applications. Additional features and options may be added in future releases.**
 
 `color-my-log` is a lightweight npm package that enables you to print colored log messages in Node.js applications. It currently supports customizing the background color of log messages.
@@ -19,12 +20,13 @@ To use `color-my-log` in your Node.js application, first, require the package an
 ### JS
 
 ```javascript
-const { log } = require("color-my-log")
+const { log } = require("color-my-log");
 ```
 
 ### ES6
+
 ```typescript
-import { log } from "color-my-log"
+import { log } from "color-my-log";
 ```
 
 _Coming soon_
@@ -46,18 +48,17 @@ log.white(message, options);
 
 ![image](https://github.com/Hard-Luck/color-my-log/assets/72257311/66bd1a7a-10b6-4b06-b485-be5eb02e0619)
 
-
 **Parameters:**
 
 - `message` (string): The log message that you want to print.
 - `options` (optional object): An optional object to customize the log appearance.
-  - `background` (string): Specify the background color for the log message. Valid values are `'Black'`, `'Red'`, `'Green'`, `'Yellow'`, `'Blue'`, `'Magenta'`, `'Cyan'`, and `'White'`.
+  - `background` (string): Specify the background color for the log message. Valid values are `'black'`, `'red'`, `'green'`, `'yellow'`, `'blue'`, `'magenta'`, `'cyan'`, and `'white'`.
 
 **Example:**
 
 ```javascript
-log.red("Error occurred!", { background: "Yellow" });
-log.blue("Info message", { background: "Green" });
+log.red("Error occurred!", { background: "yellow" });
+log.blue("Info message", { background: "green" });
 ```
 
 ### Available Colors
