@@ -19,10 +19,13 @@ To use `color-my-log` in your Node.js application, first, require the package an
 ### JS
 
 ```javascript
-const log = require("color-my-log").default;
+const { log } = require("color-my-log")
 ```
 
-### TS
+### ES6
+```typescript
+import { log } from "color-my-log"
+```
 
 _Coming soon_
 
@@ -40,6 +43,9 @@ log.magenta(message, options);
 log.cyan(message, options);
 log.white(message, options);
 ```
+
+![image](https://github.com/Hard-Luck/color-my-log/assets/72257311/66bd1a7a-10b6-4b06-b485-be5eb02e0619)
+
 
 **Parameters:**
 
