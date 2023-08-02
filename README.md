@@ -78,7 +78,7 @@ The following are the available foreground colors that you can use with the `col
 
 The package is currently under development, and more features and customization options may be added in future releases. The package uses ANSI escape codes for color formatting, and you can easily extend it with your own color choices.
 
-If you have any suggestions or feature requests, feel free to submit them to [GitHub repository link].
+If you have any suggestions or feature requests, feel free to submit them to [[GitHub repository link](https://github.com/Hard-Luck/color-my-log)].
 
 ## License
 
